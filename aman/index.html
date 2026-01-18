@@ -947,7 +947,7 @@
             }
         });
 
-        // Resume upload handling
+        // Resume upload handling - stores as base64 in localStorage
         function handleResumeUpload(event) {
             const file = event.target.files[0];
             if (!file) return;
@@ -957,35 +957,43 @@
                 return;
             }
 
-            // Create a download with the correct filename
             const reader = new FileReader();
             reader.onload = function (e) {
-                // Create a blob and download it with the correct name
-                const blob = new Blob([e.target.result], { type: 'application/pdf' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'Madeshwaran_Resume.pdf';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
+                // Store as base64 in localStorage
+                const base64Data = e.target.result;
+                localStorage.setItem('portfolioResume', base64Data);
+                localStorage.setItem('portfolioResumeName', file.name);
+                localStorage.setItem('portfolioResumeDate', new Date().toLocaleString());
 
                 // Update UI
-                document.getElementById('resumeFileName').textContent = 'Madeshwaran_Resume.pdf';
+                document.getElementById('resumeFileName').textContent = file.name + ' (Uploaded)';
+                document.getElementById('resumeFileName').style.color = 'var(--color-green)';
                 document.getElementById('downloadResumeBtn').style.display = 'inline-flex';
 
-                showToast('Resume downloaded! Place it in /resume/ folder and push to GitHub.');
+                showToast('Resume uploaded successfully! It is now available for download on your website.');
             };
-            reader.readAsArrayBuffer(file);
+            reader.readAsDataURL(file);
         }
 
-        // Check if resume exists
+        // Check if resume exists (localStorage first, then file)
         async function checkResumeExists() {
+            // Check localStorage first
+            const savedResume = localStorage.getItem('portfolioResume');
+            const savedName = localStorage.getItem('portfolioResumeName');
+            const savedDate = localStorage.getItem('portfolioResumeDate');
+
+            if (savedResume && savedName) {
+                document.getElementById('resumeFileName').textContent = savedName + ' (Uploaded: ' + savedDate + ')';
+                document.getElementById('resumeFileName').style.color = 'var(--color-green)';
+                document.getElementById('downloadResumeBtn').style.display = 'inline-flex';
+                return;
+            }
+
+            // Fallback to checking file
             try {
                 const response = await fetch('/resume/Madeshwaran_Resume.pdf', { method: 'HEAD' });
                 if (response.ok) {
-                    document.getElementById('resumeFileName').textContent = 'Madeshwaran_Resume.pdf (Current)';
+                    document.getElementById('resumeFileName').textContent = 'Madeshwaran_Resume.pdf (From server)';
                     document.getElementById('downloadResumeBtn').style.display = 'inline-flex';
                 }
             } catch (e) {
