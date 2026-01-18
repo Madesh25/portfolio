@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Madeshwaran M - DevOps Engineer</title>
+    <meta name="description" content="Work experience of Madeshwaran M as DevOps Engineer">
+    <link href="images/DcZrecPWYZKbhOIPYCEMLzuVvF4.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #09090b;
+            --color-bg-card: rgba(8, 8, 10, 0.7);
+            --color-green: #00ff6a;
+            --color-cyan: #00ffff;
+            --color-text: #a8d7e7;
+            --color-border: #1d2025;
+            --color-purple: #c084fc;
+            --color-yellow: #facc15;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 55px;
+            background-color: rgba(28, 36, 38, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-green);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            color: var(--color-green);
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: var(--color-green);
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .nav a:hover {
+            background-color: rgba(0, 255, 106, 0.1);
+        }
+
+        .nav a.active {
+            background-color: var(--color-green);
+            color: var(--color-bg);
+        }
+
+        .nav-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .availability {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--color-cyan);
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-cyan);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .main {
+            padding-top: 100px;
+            padding-bottom: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .page-title {
+            color: var(--color-green);
+            font-size: 12px;
+            margin-bottom: 60px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            color: var(--color-green);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .section-title::before {
+            content: '$ ';
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1em;
+            background-color: var(--color-green);
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .experience-intro {
+            color: var(--color-text);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            max-width: 900px;
+        }
+
+        .experience-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .exp-card {
+            background-color: transparent;
+            border-left: 3px solid var(--color-green);
+            padding: 0 0 0 25px;
+            position: relative;
+        }
+
+        .exp-card:nth-child(2) {
+            border-left-color: var(--color-cyan);
+        }
+
+        .exp-card:nth-child(3) {
+            border-left-color: var(--color-purple);
+        }
+
+        .exp-card:nth-child(4) {
+            border-left-color: var(--color-yellow);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .exp-title {
+            color: var(--color-text);
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .exp-date {
+            color: var(--color-text);
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        .exp-company {
+            color: var(--color-cyan);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .exp-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exp-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        .exp-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-green);
+        }
+
+        .exp-card:nth-child(2) .exp-list li::before {
+            color: var(--color-cyan);
+        }
+
+        .exp-card:nth-child(3) .exp-list li::before {
+            color: var(--color-purple);
+        }
+
+        .exp-card:nth-child(4) .exp-list li::before {
+            color: var(--color-yellow);
+        }
+
+        @media (max-width: 809px) {
+            .header {
+                padding: 10px 16px;
+                height: auto;
+                position: relative;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                font-size: 12px;
+            }
+
+            .nav a {
+                padding: 5px 8px;
+            }
+
+            .availability {
+                font-size: 11px;
+            }
+
+            .logo a {
+                font-size: 14px;
+            }
+
+            .main {
+                padding: 20px 16px 60px;
+            }
+
+            .exp-header {
+                flex-direction: column;
+            }
+        }
+
+        /* Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .bg-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 106, 0.03) 2px, rgba(0, 255, 106, 0.03) 4px);
+            animation: scanlines 10s linear infinite;
+        }
+
+        @keyframes scanlines {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        .bg-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 255, 106, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 106, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .bg-glow {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            width: 1000px;
+            height: 600px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(ellipse, rgba(0, 255, 106, 0.08) 0%, transparent 60%);
+            animation: glow-pulse 5s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: rgba(0, 255, 106, 0.6);
+            border-radius: 50%;
+            animation: float-up linear infinite;
+            box-shadow: 0 0 8px rgba(0, 255, 106, 0.8);
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(20px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="bg-grid"></div>
+        <div class="bg-lines"></div>
+        <div class="bg-glow"></div>
+    </div>
+
+    <script>
+        const bgAnimation = document.querySelector('.bg-animation');
+        for (let i = 0; i < 70; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (5 + Math.random() * 8) + 's';
+            particle.style.animationDelay = (Math.random() * 6) + 's';
+            const size = 2 + Math.random() * 3;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            bgAnimation.appendChild(particle);
+        }
+    </script>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo"><a href="index.html">>. madesh@portfolio:~$</a></div>
+            <nav class="nav">
+                <a href="about.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg> About
+                </a>
+                <a href="projects.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg> Projects
+                </a>
+                <a href="experience.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg> Experience
+                </a>
+                <a href="blog.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg> Blog
+                </a>
+                <a href="contact.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg> Contact
+                </a>
+            </nav>
+            <div class="availability"><span class="availability-dot"></span> Available</div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="page-title">madesh@portfolio:~$ cat ~/experience.json</div>
+
+        <section class="section">
+            <h2 class="section-title">jq '.experience[]' ~/experience.json<span class="cursor"></span></h2>
+
+            <p class="experience-intro">
+                I bring hands-on experience in DevOps, cloud infrastructure, and enterprise platform operations,
+                supporting deployments, migrations, and automation across cloud-native environments.
+            </p>
+
+            <div class="experience-cards" id="experienceCards">
+                <!-- Experience loaded dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        async function loadExperience() {
+            let experienceData = { experience: [] };
+
+            const localData = localStorage.getItem('portfolioExperience');
+            if (localData) {
+                try { experienceData = JSON.parse(localData); } catch (e) { console.error(e); }
+            }
+
+            if (!experienceData.experience || experienceData.experience.length === 0) {
+                try {
+                    const response = await fetch('/content/experience.json');
+                    experienceData = await response.json();
+                } catch (e) { console.error(e); }
+            }
+
+            renderExperience(experienceData.experience);
+        }
+
+        function renderExperience(experiences) {
+            const container = document.getElementById('experienceCards');
+
+            container.innerHTML = experiences.map(exp => `
+                <article class="exp-card">
+                    <div class="exp-header">
+                        <h3 class="exp-title">${exp.title}</h3>
+                        <span class="exp-date">${exp.startDate} - ${exp.endDate}</span>
+                    </div>
+                    <p class="exp-company">${exp.company}</p>
+                    <ul class="exp-list">
+                        ${exp.responsibilities.map(r => `<li>${r}</li>`).join('')}
+                    </ul>
+                </article>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadExperience);
+    </script>
+</body>
+
+</html>

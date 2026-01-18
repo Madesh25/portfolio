@@ -1,0 +1,66 @@
+{
+    "experience": [
+        {
+            "id": 1,
+            "title": "Senior Associate – DevOps Engineer (MarTech Platform)",
+            "company": "Xerago – MarTech Team",
+            "location": "Chennai, TN",
+            "startDate": "Jul 2025",
+            "endDate": "Present",
+            "responsibilities": [
+                "Worked on deployment, upgrade, and migration of enterprise MarTech platforms (Unica) from on-premises environments to cloud-based infrastructure",
+                "Designed and operated Kubernetes-based environments (k3s) for demo, training, and validation purposes, enabling safe testing of platform upgrades and configurations",
+                "Built and maintained Docker images and Helm charts to standardize application packaging and deployment workflows",
+                "Implemented and managed cloud infrastructure and services on AWS, supporting application deployments and platform operations",
+                "Designed an automated data pipeline integrating Airbyte, MinIO, Hadoop, and Dremio for internal testing and validation of data flows",
+                "Developed a lightweight command-based web chatbot that translates simple English queries into system command outputs using APIs and rule-based logic (Anti-Gravity), without reliance on AI models",
+                "Supported platform reliability through configuration management, deployment automation, and operational testing across environments",
+                "Collaborated closely with MarTech and platform teams to support migrations, demos, and internal enablement activities"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "DevOps Engineer (Independent Practice & Skill Development)",
+            "company": "Self-Directed Learning",
+            "location": "",
+            "startDate": "Feb 2025",
+            "endDate": "Jul 2025",
+            "responsibilities": [
+                "Dedicated period focused on strengthening DevOps and platform engineering skills through hands-on implementation and practice",
+                "Designed and automated CI/CD pipelines using Jenkins and GitLab CI to improve deployment consistency and reduce manual effort",
+                "Built and operated cloud and container-based environments using AWS, Docker, Kubernetes, and OpenShift for application deployment testing",
+                "Implemented infrastructure automation using Terraform and Ansible, focusing on repeatable and reliable environment provisioning",
+                "Set up monitoring and observability stacks using Prometheus, Grafana, and CloudWatch to gain operational visibility"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Junior PLM Consultant (Junior DevOps Engineer)",
+            "company": "PDSVISION – Chennai, TN",
+            "location": "Chennai, TN",
+            "startDate": "Jan 2023",
+            "endDate": "Feb 2025",
+            "responsibilities": [
+                "Supported deployment and operations of ThingWorx IoT applications in cloud-based environments, focusing on scalability and availability",
+                "Monitored application and infrastructure health using GCP monitoring tools, ensuring system uptime and proactive issue detection",
+                "Automated installation, upgrade, and patching processes for enterprise applications, reducing manual effort and deployment risk",
+                "Streamlined application customization and release workflows by automating packaging and rollout processes",
+                "Worked closely with platform and infrastructure components, gaining hands-on experience in CI/CD pipelines, containerized deployments, and production support workflows"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "YTS Trainee (Government Apprenticeship Program)",
+            "company": "NCR Corporation – Chennai, TN",
+            "location": "Chennai, TN",
+            "startDate": "Jul 2022",
+            "endDate": "Dec 2022",
+            "responsibilities": [
+                "Performed functional and performance testing of ATM systems to ensure reliability",
+                "Executed mechanical assembly of ATM units following engineering guidelines",
+                "Supported the integration of hardware components",
+                "Conducted final quality inspections to verify compliance with technical standards"
+            ]
+        }
+    ]
+}

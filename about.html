@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Madeshwaran M - DevOps Engineer</title>
+    <meta name="description"
+        content="DevOps Engineer with 2+ years of hands-on expertise in CI/CD, AWS, Kubernetes, and infrastructure automation.">
+    <link href="images/DcZrecPWYZKbhOIPYCEMLzuVvF4.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #09090b;
+            --color-bg-card: rgba(8, 8, 10, 0.7);
+            --color-green: #00ff6a;
+            --color-cyan: #00ffff;
+            --color-text: #a8d7e7;
+            --color-border: #1d2025;
+            --color-purple: #c084fc;
+            --color-yellow: #facc15;
+            --color-red: #f87171;
+            --color-blue: #78b5ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 55px;
+            background-color: rgba(28, 36, 38, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-green);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            color: var(--color-green);
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: var(--color-green);
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .nav a:hover {
+            background-color: rgba(0, 255, 106, 0.1);
+        }
+
+        .nav a.active {
+            background-color: var(--color-green);
+            color: var(--color-bg);
+        }
+
+        .nav-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .availability {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--color-cyan);
+            font-size: 14px;
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-cyan);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Main Content */
+        .main {
+            padding-top: 100px;
+            padding-bottom: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .page-title {
+            color: var(--color-green);
+            font-size: 12px;
+            margin-bottom: 60px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            color: var(--color-green);
+            font-size: 16px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '$';
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1em;
+            background-color: var(--color-green);
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Bio Section */
+        .bio-section {
+            display: flex;
+            gap: 30px;
+            padding-left: 100px;
+        }
+
+        .bio-text {
+            flex: 1;
+        }
+
+        .bio-text code {
+            display: block;
+            line-height: 1.8;
+        }
+
+        .profile-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            position: relative;
+        }
+
+        .profile-wrapper.glitch-img::before,
+        .profile-wrapper.glitch-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 220px;
+            border-radius: 4px;
+            border: 2px solid var(--color-green);
+            background: url('images/profile_2.jpg') center/cover;
+            pointer-events: none;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 2px solid var(--color-green);
+            box-shadow: 0 0 30px rgba(0, 255, 106, 0.3);
+        }
+
+        .profile-caption {
+            font-size: 12px;
+            color: var(--color-green);
+        }
+
+        /* Lists */
+        .list {
+            padding-left: 100px;
+            list-style: none;
+        }
+
+        .list li {
+            margin-bottom: 10px;
+        }
+
+        .list li code {
+            color: var(--color-text);
+        }
+
+        /* Skills Two Column */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px 40px;
+            padding-left: 100px;
+            list-style: none;
+        }
+
+        .skills-grid li {
+            margin-bottom: 5px;
+        }
+
+        .skills-grid li code {
+            color: var(--color-text);
+        }
+
+        /* Tech Stack Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding-left: 100px;
+        }
+
+        .tech-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .tech-card::before,
+        .tech-card::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: var(--color-green);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .tech-card::before {
+            top: -3px;
+            left: -3px;
+        }
+
+        .tech-card::after {
+            bottom: -3px;
+            right: -3px;
+        }
+
+        .tech-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .tech-title {
+            color: var(--color-green);
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .tech-items {
+            color: var(--color-text);
+            font-size: 12px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-left: 100px;
+        }
+
+        .service-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        /* Project Cards */
+        .project-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding-left: 100px;
+        }
+
+        .project-card {
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .project-card::before,
+        .project-card::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: var(--color-green);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        .project-card::before {
+            top: -3px;
+            left: -3px;
+        }
+
+        .project-card::after {
+            bottom: -3px;
+            right: -3px;
+        }
+
+        .project-card-title {
+            color: var(--color-cyan);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .project-card-desc {
+            color: var(--color-text);
+            font-size: 12px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            background-color: rgba(0, 255, 106, 0.1);
+            color: var(--color-green);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            border: 1px solid var(--color-border);
+        }
+
+        .project-card-link {
+            color: var(--color-green);
+            text-decoration: none;
+            font-size: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+
+        .project-card-link:hover {
+            color: var(--color-cyan);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .service-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .service-name {
+            color: var(--color-green);
+            font-size: 14px;
+        }
+
+        .service-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .service-label {
+            color: var(--color-text);
+        }
+
+        .service-value {
+            color: var(--color-green);
+        }
+
+        /* Education */
+        .education-list {
+            padding-left: 100px;
+        }
+
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .education-item code {
+            color: var(--color-text);
+        }
+
+        /* Changes/Latest */
+        .changes-section {
+            padding-left: 100px;
+        }
+
+        .change-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .change-hash {
+            color: var(--color-cyan);
+            font-size: 12px;
+        }
+
+        .change-text {
+            color: var(--color-text);
+        }
+
+        .change-time {
+            color: var(--color-text);
+            opacity: 0.6;
+            font-size: 12px;
+        }
+
+        .btn-resume {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 1px solid var(--color-green);
+            color: var(--color-green);
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+
+        .btn-resume:hover {
+            background-color: var(--color-green);
+            color: var(--color-bg);
+        }
+
+        /* Mobile */
+        @media (max-width: 809px) {
+            .header {
+                padding: 10px 16px;
+                height: auto;
+                position: relative;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                font-size: 12px;
+            }
+
+            .nav a {
+                padding: 5px 8px;
+            }
+
+            .availability {
+                font-size: 11px;
+            }
+
+            .logo a {
+                font-size: 14px;
+            }
+
+            .main {
+                padding: 20px 16px 60px;
+            }
+
+            .bio-section {
+                flex-direction: column;
+                padding-left: 0;
+                align-items: center;
+            }
+
+            .profile-wrapper {
+                order: -1;
+                width: 100%;
+                text-align: center;
+                margin: 0 auto 20px auto;
+            }
+
+            .profile-wrapper img {
+                margin: 0 auto;
+            }
+
+            .list,
+            .tech-grid,
+            .services-grid,
+            .education-list,
+            .changes-section {
+                padding-left: 0;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                padding-left: 0;
+            }
+
+            .project-cards-grid {
+                grid-template-columns: 1fr;
+                padding-left: 0;
+            }
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .bg-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background: repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 255, 106, 0.03) 2px,
+                    rgba(0, 255, 106, 0.03) 4px);
+            animation: scanlines 10s linear infinite;
+        }
+
+        @keyframes scanlines {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        .bg-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(0, 255, 106, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 106, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .bg-glow {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            width: 1000px;
+            height: 600px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(ellipse, rgba(0, 255, 106, 0.08) 0%, transparent 60%);
+            animation: glow-pulse 5s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: rgba(0, 255, 106, 0.6);
+            border-radius: 50%;
+            animation: float-up linear infinite;
+            box-shadow: 0 0 8px rgba(0, 255, 106, 0.8);
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(20px);
+                opacity: 0;
+            }
+        }
+
+        /* Glitch Effect for Images */
+        .glitch-img {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-img::before,
+        .glitch-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            background-size: cover;
+            border-radius: 4px;
+            border: 2px solid var(--color-green);
+        }
+
+        .glitch-img::before {
+            animation: glitch-img-1 3s infinite linear;
+        }
+
+        .glitch-img::after {
+            animation: glitch-img-2 3s infinite linear;
+        }
+
+        @keyframes glitch-img-1 {
+
+            0%,
+            90%,
+            100% {
+                opacity: 0;
+                transform: translate(0);
+            }
+
+            91% {
+                opacity: 0.5;
+                transform: translate(-3px, -2px);
+                filter: hue-rotate(90deg);
+            }
+
+            92% {
+                opacity: 0;
+                transform: translate(0);
+            }
+
+            93% {
+                opacity: 0.5;
+                transform: translate(3px, 1px);
+                filter: hue-rotate(180deg);
+            }
+
+            94% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes glitch-img-2 {
+
+            0%,
+            85%,
+            100% {
+                opacity: 0;
+                transform: translate(0);
+            }
+
+            86% {
+                opacity: 0.5;
+                transform: translate(2px, 3px);
+                filter: hue-rotate(-90deg);
+            }
+
+            87% {
+                opacity: 0;
+                transform: translate(0);
+            }
+
+            88% {
+                opacity: 0.5;
+                transform: translate(-2px, -1px);
+                filter: hue-rotate(90deg);
+            }
+
+            89% {
+                opacity: 0;
+            }
+        }
+
+        .glitch-img:hover::before,
+        .glitch-img:hover::after {
+            animation-duration: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-grid"></div>
+        <div class="bg-lines"></div>
+        <div class="bg-glow"></div>
+    </div>
+
+    <script>
+        // Create floating particles
+        const bgAnimation = document.querySelector('.bg-animation');
+        for (let i = 0; i < 70; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (5 + Math.random() * 8) + 's';
+            particle.style.animationDelay = (Math.random() * 6) + 's';
+            const size = 2 + Math.random() * 3;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            bgAnimation.appendChild(particle);
+        }
+    </script>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">>. madesh@portfolio:~$</a>
+            </div>
+            <nav class="nav">
+                <a href="about.html" class="active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    About
+                </a>
+                <a href="projects.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Projects
+                </a>
+                <a href="experience.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    Experience
+                </a>
+                <a href="blog.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                    Blog
+                </a>
+                <a href="contact.html">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Contact
+                </a>
+            </nav>
+            <div class="availability">
+                <span class="availability-dot"></span>
+                Available
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="page-title">madesh@portfolio:~$ about</div>
+
+        <!-- Intro -->
+        <section class="section">
+            <h2 class="section-title">cat ~/intro.md<span class="cursor"></span></h2>
+            <p style="color: var(--color-cyan); font-size: 18px; margin-bottom: 10px;">
+                Hi, I'm <strong>Madeshwaran M</strong> — Cloud & DevOps Engineer
+            </p>
+        </section>
+
+        <!-- Who am I -->
+        <section class="section">
+            <h2 class="section-title">whoami<span class="cursor"></span></h2>
+            <div class="bio-section">
+                <div class="bio-text">
+                    <code>DevOps Engineer with 3+ years of experience designing, deploying, and operating cloud-native platforms in production environments. Strong hands-on experience with Kubernetes (EKS, k3s), Docker, Helm, and CI/CD pipelines, with a strong focus on automation, infrastructure as code, and observability.</code>
+                    <br><br>
+                    <code>Experienced in supporting scalable systems, improving deployment reliability, and operating platform and data services such as object storage, data pipelines, and distributed systems.</code>
+                </div>
+                <figure class="profile-wrapper glitch-img">
+                    <img src="images/profile_2.jpg" alt="Madeshwaran M" class="profile-img"
+                        onerror="this.src='https://via.placeholder.com/200x220/09090b/00ff6a?text=M'">
+                    <figcaption class="profile-caption"></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section">
+            <h2 class="section-title">ls ~/skills/<span class="cursor"></span></h2>
+            <div class="skills-grid" style="grid-template-columns: repeat(2, 1fr); gap: 30px;">
+                <div>
+                    <code style="color: var(--color-green); font-size: 14px;">CI/CD & Automation</code>
+                    <ul class="list" style="padding-left: 20px; margin-top: 10px;">
+                        <li><code>• Jenkins, GitLab CI</code></li>
+                        <li><code>• Automated build, test, and deployment pipelines</code></li>
+                    </ul>
+                </div>
+                <div>
+                    <code style="color: var(--color-green); font-size: 14px;">Container & Platform Engineering</code>
+                    <ul class="list" style="padding-left: 20px; margin-top: 10px;">
+                        <li><code>• Kubernetes (EKS, k3s), Docker, Helm</code></li>
+                        <li><code>• OpenShift, containerized workloads</code></li>
+                    </ul>
+                </div>
+                <div>
+                    <code style="color: var(--color-green); font-size: 14px;">Infrastructure as Code & Cloud</code>
+                    <ul class="list" style="padding-left: 20px; margin-top: 10px;">
+                        <li><code>• Terraform, Ansible</code></li>
+                        <li><code>• AWS (EC2, S3, IAM, RDS, ECS)</code></li>
+                    </ul>
+                </div>
+                <div>
+                    <code style="color: var(--color-green); font-size: 14px;">Observability & Reliability</code>
+                    <ul class="list" style="padding-left: 20px; margin-top: 10px;">
+                        <li><code>• Prometheus, Grafana, CloudWatch</code></li>
+                        <li><code>• Monitoring, alerting, and system visibility</code></li>
+                    </ul>
+                </div>
+                <div style="grid-column: span 2;">
+                    <code style="color: var(--color-green); font-size: 14px;">Systems & Virtualization</code>
+                    <ul class="list" style="padding-left: 20px; margin-top: 10px;">
+                        <li><code>• Linux CLI, Shell scripting, Git</code></li>
+                        <li><code>• Proxmox, Hyper-V</code></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="section">
+            <h2 class="section-title">cat ~/tech-stack.json<span class="cursor"></span></h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">☁️</div>
+                    <div class="tech-title"><code>Cloud</code></div>
+                    <div class="tech-items"><code>AWS, GCP</code></div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🐳</div>
+                    <div class="tech-title"><code>Containers</code></div>
+                    <div class="tech-items"><code>Docker, Kubernetes, OpenShift</code></div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔧</div>
+                    <div class="tech-title"><code>IaC</code></div>
+                    <div class="tech-items"><code>Terraform, Ansible, CloudFormation</code></div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔄</div>
+                    <div class="tech-title"><code>CI/CD</code></div>
+                    <div class="tech-items"><code>Jenkins, GitLab CI, GitHub Actions</code></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section">
+            <h2 class="section-title">cat ~/services.yml<span class="cursor"></span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-dot" style="background-color: var(--color-green);"></span>
+                        <span class="service-name">DEVOPS & PLATFORM CAPABILITIES</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• CI/CD automation & release pipelines</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• Cloud & container platforms</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• Kubernetes operations & platform support</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-dot" style="background-color: var(--color-cyan);"></span>
+                        <span class="service-name">INFRASTRUCTURE & RELIABILITY</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• Infrastructure as Code (Terraform, Ansible)</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• Linux systems & monitoring</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• Observability, alerting, and troubleshooting</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-dot" style="background-color: var(--color-purple);"></span>
+                        <span class="service-name">PLATFORM & DATA SERVICES</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• Object storage platforms</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• Data pipelines & integrations</span>
+                    </div>
+                    <div class="service-row">
+                        <span class="service-label">• Distributed system support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">cat ~/education.txt<span class="cursor"></span></h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <code>🎓 B.E. Mechanical Engineering</code>
+                    <br>
+                    <code style="opacity: 0.7; margin-left: 20px;">Muthayammal Engineering College (2018–2022)</code>
+                    <br>
+                    <code style="opacity: 0.7; margin-left: 20px;">GPA: 7.63 / 10</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume -->
+        <section class="section">
+            <h2 class="section-title">cat ~/resume.pdf<span class="cursor"></span></h2>
+            <div class="changes-section">
+                <p style="color: var(--color-text); margin-bottom: 20px;">
+                    <code>Get my complete work history and qualifications.</code>
+                </p>
+
+                <a href="resume.pdf" class="btn-resume">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resume
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

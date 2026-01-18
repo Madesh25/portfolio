@@ -1,0 +1,40 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Operating a Lightweight Kubernetes Cluster (k3s on Proxmox)",
+            "category": "Kubernetes",
+            "excerpt": "An operational walkthrough of running a lightweight Kubernetes cluster using k3s, covering networking, ingress, storage, and day-2 considerations.",
+            "readTime": "5 min read",
+            "status": "Draft in progress",
+            "slug": "k3s-proxmox"
+        },
+        {
+            "id": 2,
+            "title": "Designing CI/CD Pipelines with GitLab CI and Terraform",
+            "category": "CI/CD",
+            "excerpt": "A practical breakdown of designing CI/CD pipelines using GitLab CI and Terraform, focusing on automation, repeatability, and deployment reliability.",
+            "readTime": "8 min read",
+            "status": "Draft in progress",
+            "slug": "cicd-gitlab-terraform"
+        },
+        {
+            "id": 3,
+            "title": "Operating Self-Hosted Services Using Docker",
+            "category": "Infrastructure",
+            "excerpt": "Operational insights on running containerized services with Docker, focusing on reliability, data persistence, and system maintenance.",
+            "readTime": "10 min read",
+            "status": "Draft in progress",
+            "slug": "self-hosted-docker"
+        },
+        {
+            "id": 4,
+            "title": "Building an Observability Stack on AWS with CloudWatch and Grafana",
+            "category": "Observability",
+            "excerpt": "Practical approach to implementing monitoring and alerting infrastructure for AWS environments using CloudWatch and Grafana.",
+            "readTime": "7 min read",
+            "status": "Draft in progress",
+            "slug": "observability-aws"
+        }
+    ]
+}

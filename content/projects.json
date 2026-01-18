@@ -1,0 +1,148 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "24/7 IoT Web Application",
+            "status": "Operational",
+            "description": "Real-time IoT application hosted on GCP with continuous availability monitoring.",
+            "responsibilities": [
+                "Maintained 24/7 uptime with zero escalations over one year",
+                "Monitored system health using GCP observability tools",
+                "Ensured high availability through proactive alerting"
+            ],
+            "tags": [
+                "GCP",
+                "IoT",
+                "Monitoring",
+                "High Availability"
+            ],
+            "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
+        },
+        {
+            "id": 2,
+            "title": "CI/CD Pipeline Automation",
+            "status": "Operational",
+            "description": "Designed and operated CI/CD pipelines to automate build, test, and deployment workflows.",
+            "responsibilities": [
+                "Pipeline design and automation using Jenkins and GitLab CI",
+                "Integration with container platforms (Docker, Kubernetes)",
+                "Deployment reliability and rollback support"
+            ],
+            "tags": [
+                "CI/CD",
+                "Jenkins",
+                "GitLab CI",
+                "Kubernetes"
+            ],
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+        },
+        {
+            "id": 3,
+            "title": "AWS Infrastructure Automation",
+            "status": "Operational",
+            "description": "Built and managed cloud infrastructure on AWS using infrastructure as code principles.",
+            "responsibilities": [
+                "Provisioned EC2, S3, IAM, RDS, and ECS using Terraform",
+                "Implemented cost-effective resource management",
+                "Automated infrastructure deployment and configuration"
+            ],
+            "tags": [
+                "AWS",
+                "Terraform",
+                "IaC",
+                "Cloud"
+            ],
+            "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop"
+        },
+        {
+            "id": 4,
+            "title": "Kubernetes Cluster Operations",
+            "status": "Operational",
+            "description": "Operated lightweight Kubernetes clusters for container orchestration and application deployment.",
+            "responsibilities": [
+                "Deployed and managed k3s clusters on Proxmox",
+                "Configured networking, ingress, and storage",
+                "Managed containerized applications with Helm charts"
+            ],
+            "tags": [
+                "Kubernetes",
+                "k3s",
+                "Helm",
+                "Containers"
+            ],
+            "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&h=400&fit=crop"
+        },
+        {
+            "id": 5,
+            "title": "Observability Stack",
+            "status": "Operational",
+            "description": "Implemented monitoring and observability infrastructure for system visibility and alerting.",
+            "responsibilities": [
+                "Set up Prometheus and Grafana for metrics collection",
+                "Configured CloudWatch for AWS resource monitoring",
+                "Built dashboards for operational visibility"
+            ],
+            "tags": [
+                "Prometheus",
+                "Grafana",
+                "CloudWatch",
+                "Monitoring"
+            ],
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+        },
+        {
+            "id": 6,
+            "title": "Container Platform Operations",
+            "status": "Operational",
+            "description": "Managed containerized application deployments on Red Hat OpenShift platform.",
+            "responsibilities": [
+                "Deployed applications using OpenShift and Helm",
+                "Managed container lifecycle and scaling",
+                "Implemented container security best practices"
+            ],
+            "tags": [
+                "OpenShift",
+                "Docker",
+                "Containers",
+                "Helm"
+            ],
+            "image": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600&h=400&fit=crop"
+        },
+        {
+            "id": 7,
+            "title": "Configuration Management with Ansible",
+            "status": "Operational",
+            "description": "Automated server configuration and application deployment using Ansible.",
+            "responsibilities": [
+                "Developed Ansible playbooks for configuration management",
+                "Automated application installation and updates",
+                "Standardized server configurations across environments"
+            ],
+            "tags": [
+                "Ansible",
+                "Automation",
+                "Configuration",
+                "IaC"
+            ],
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+        },
+        {
+            "id": 8,
+            "title": "Containerized Server Infrastructure",
+            "status": "Operational",
+            "description": "Built self-hosted server infrastructure using Docker for various services.",
+            "responsibilities": [
+                "Containerized applications using Docker Compose",
+                "Managed persistent storage and networking",
+                "Implemented backup and recovery procedures"
+            ],
+            "tags": [
+                "Docker",
+                "Self-Hosted",
+                "Infrastructure",
+                "Linux"
+            ],
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+        }
+    ]
+}
