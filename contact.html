@@ -699,7 +699,13 @@
                 </div>
 
                 <!-- Contact Form -->
-                <form class="contact-form" action="#" method="post">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <!-- Web3Forms Access Key - Replace with your key from web3forms.com -->
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Contact from Portfolio Website">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                     <h3 class="form-title">Send Message</h3>
 
                     <div class="form-group">
@@ -715,7 +721,8 @@
 
                     <div class="form-group">
                         <label class="form-label" for="subject">subject</label>
-                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry">
+                        <input type="text" id="subject" name="user_subject" class="form-input"
+                            placeholder="Project Inquiry">
                     </div>
 
                     <div class="form-group">
@@ -724,7 +731,7 @@
                             placeholder="Hello, I'd like to discuss..." required></textarea>
                     </div>
 
-                    <button type="submit" class="form-submit">
+                    <button type="submit" class="form-submit" id="submitBtn">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -732,6 +739,7 @@
                         </svg>
                         Send Message
                     </button>
+                    <p id="formResult" style="margin-top: 15px; text-align: center;"></p>
                 </form>
             </div>
         </section>

@@ -495,7 +495,6 @@
             <button class="tab-btn active" onclick="switchTab('projects')">Projects</button>
             <button class="tab-btn" onclick="switchTab('blogs')">Blogs</button>
             <button class="tab-btn" onclick="switchTab('experience')">Experience</button>
-            <button class="tab-btn" onclick="switchTab('resume')">Resume</button>
         </div>
 
         <!-- Projects Section -->
@@ -523,59 +522,6 @@
                 <button class="add-btn" onclick="openModal('experience')">+ Add Experience</button>
             </div>
             <div class="items-grid" id="experienceGrid"></div>
-        </div>
-
-        <!-- Resume Section -->
-        <div class="content-section" id="resumeSection">
-            <div class="section-header">
-                <h2 class="section-title">$ cat ~/resume.pdf</h2>
-            </div>
-            <div class="resume-upload-area">
-                <div class="resume-status" id="resumeStatus">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                    <p id="resumeFileName">No resume uploaded yet</p>
-                    <p class="resume-hint">Upload a PDF file to make it available for download</p>
-                </div>
-                <div class="resume-actions">
-                    <input type="file" id="resumeFileInput" accept=".pdf" style="display: none;"
-                        onchange="handleResumeUpload(event)">
-                    <button class="add-btn" onclick="document.getElementById('resumeFileInput').click()">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="17 8 12 3 7 8"></polyline>
-                            <line x1="12" y1="3" x2="12" y2="15"></line>
-                        </svg>
-                        Upload Resume PDF
-                    </button>
-                    <a href="/resume/Madeshwaran_Resume.pdf" download class="edit-btn" id="downloadResumeBtn"
-                        style="display: none;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download Current Resume
-                    </a>
-                </div>
-                <div class="resume-instructions">
-                    <h4 style="color: var(--color-cyan); margin-bottom: 10px;">📋 How to update your resume:</h4>
-                    <ol style="color: var(--color-text); opacity: 0.8; padding-left: 20px; line-height: 1.8;">
-                        <li>Click "Upload Resume PDF" and select your PDF file</li>
-                        <li>A download will start with a pre-named file</li>
-                        <li>Place this file in your project: <code
-                                style="color: var(--color-green);">/resume/Madeshwaran_Resume.pdf</code></li>
-                        <li>Git commit and push to deploy the update</li>
-                    </ol>
-                </div>
-            </div>
         </div>
     </div>
 
