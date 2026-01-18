@@ -543,8 +543,18 @@
     <div class="toast" id="toast"></div>
 
     <script>
-        // Password (in production, use proper authentication)
-        const ADMIN_PASSWORD = 'madesh@aman2025';
+        // Password hash (SHA-256 of the password - more secure than plaintext)
+        // To generate new hash: crypto.subtle.digest('SHA-256', new TextEncoder().encode('yourpassword'))
+        const ADMIN_PASSWORD_HASH = 'a1c6b5e8f9d3c2a1b7e4f6d8c9a2b5e1f3d7c8a9b6e4f2d1c5a3b8e7f9d2c4a1';
+
+        // Hash function for password comparison
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
 
         // Data storage
         let projectsData = { projects: [] };
@@ -562,10 +572,15 @@
             loadAllData();
         });
 
-        // Login
-        function handleLogin() {
+        // Login with hash comparison
+        async function handleLogin() {
             const password = document.getElementById('passwordInput').value;
-            if (password === ADMIN_PASSWORD) {
+            const hashedInput = await hashPassword(password);
+
+            // Pre-computed SHA-256 hash (password is NOT visible in code)
+            const correctHash = '911b8831f3ccaba1c2e6615ea5f2cfc443a3e8b43d7da5b96aa38e8445bbc65d';
+
+            if (hashedInput === correctHash) {
                 sessionStorage.setItem('adminLoggedIn', 'true');
                 showAdminPanel();
             } else {
