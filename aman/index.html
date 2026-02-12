@@ -468,6 +468,72 @@
             padding: 2px 6px;
             border-radius: 3px;
         }
+
+        /* Dynamic List Items */
+        .dynamic-list-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .dynamic-list-item .form-input,
+        .dynamic-list-item .form-textarea {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .remove-point-btn {
+            padding: 10px 15px;
+            background: rgba(255, 0, 0, 0.1);
+            color: var(--color-red);
+            border: 1px solid var(--color-red);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            height: 42px;
+            /* Match input height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .remove-point-btn:hover {
+            background: var(--color-red);
+            color: var(--color-bg);
+        }
+
+        .add-point-btn {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: 1px dashed var(--color-green);
+            color: var(--color-green);
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .add-point-btn:hover {
+            background: rgba(0, 255, 106, 0.05);
+        }
+
+        /* Image Upload Styles */
+        .image-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .image-preview {
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 4px;
+            border: 1px solid var(--color-border);
+            margin-top: 5px;
+            display: none;
+        }
     </style>
 </head>
 
@@ -715,16 +781,29 @@
                         <textarea class="form-textarea" name="description" required>${item?.description || ''}</textarea>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Responsibilities (one per line)</label>
-                        <textarea class="form-textarea" name="responsibilities">${item?.responsibilities?.join('\n') || ''}</textarea>
+                        <label class="form-label">Responsibilities</label>
+                        <div id="responsibilities-container">
+                            ${(item?.responsibilities || ['']).map(resp => `
+                                <div class="dynamic-list-item">
+                                    <input type="text" class="form-input" name="responsibilities" value="${resp.replace(/"/g, '&quot;')}" placeholder="Add a point..." required>
+                                    <button type="button" class="remove-point-btn" onclick="this.parentElement.remove()">×</button>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <button type="button" class="add-point-btn" onclick="addResponsibilityField('responsibilities-container')">+ Add Point</button>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Tags (comma separated)</label>
                         <input type="text" class="form-input" name="tags" value="${item?.tags?.join(', ') || ''}">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Image URL</label>
-                        <input type="text" class="form-input" name="image" value="${item?.image || ''}">
+                        <label class="form-label">Image (URL or Upload)</label>
+                        <div class="image-input-group">
+                            <input type="text" class="form-input" name="image" id="imgUrlInput" value="${item?.image || ''}" placeholder="Image URL (e.g., https://...)" onchange="updateImagePreview(this.value)">
+                            <div style="text-align: center; color: var(--color-text); opacity: 0.5; font-size: 12px;">- OR Upload from Local System -</div>
+                            <input type="file" class="form-input" id="imgFileInput" accept="image/*" onchange="handleImageUpload(this)">
+                            <img id="imgPreview" src="${item?.image || ''}" class="image-preview" style="display: ${item?.image ? 'block' : 'none'}">
+                        </div>
                     </div>
                 `;
             } else if (type === 'blog') {
@@ -769,8 +848,16 @@
                         <input type="text" class="form-input" name="endDate" value="${item?.endDate || 'Present'}" placeholder="e.g., Dec 2024 or Present">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Responsibilities (one per line)</label>
-                        <textarea class="form-textarea" name="responsibilities">${item?.responsibilities?.join('\n') || ''}</textarea>
+                        <label class="form-label">Responsibilities</label>
+                        <div id="responsibilities-container-exp">
+                            ${(item?.responsibilities || ['']).map(resp => `
+                                <div class="dynamic-list-item">
+                                    <input type="text" class="form-input" name="responsibilities" value="${resp.replace(/"/g, '&quot;')}" placeholder="Add a point..." required>
+                                    <button type="button" class="remove-point-btn" onclick="this.parentElement.remove()">×</button>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <button type="button" class="add-point-btn" onclick="addResponsibilityField('responsibilities-container-exp')">+ Add Point</button>
                     </div>
                 `;
             }
@@ -784,20 +871,62 @@
             currentEditType = null;
         }
 
+        // Helper functions for dynamic fields
+        function addResponsibilityField(containerId) {
+            const container = document.getElementById(containerId);
+            const div = document.createElement('div');
+            div.className = 'dynamic-list-item';
+            div.innerHTML = `
+                <input type="text" class="form-input" name="responsibilities" placeholder="Add a point..." required>
+                <button type="button" class="remove-point-btn" onclick="this.parentElement.remove()">×</button>
+            `;
+            container.appendChild(div);
+        }
+
+        function handleImageUpload(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const result = e.target.result;
+                    document.getElementById('imgUrlInput').value = result; // Set Base64 to URL input
+                    updateImagePreview(result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function updateImagePreview(url) {
+            const preview = document.getElementById('imgPreview');
+            if (url) {
+                preview.src = url;
+                preview.style.display = 'block';
+            } else {
+                preview.style.display = 'none';
+            }
+        }
+
         // Form submission
         document.getElementById('itemForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
 
+            // Handle responsibilities (collect from dynamic inputs)
+            const respInputs = document.querySelectorAll('input[name="responsibilities"]');
+            if (respInputs.length > 0) {
+                data.responsibilities = Array.from(respInputs)
+                    .map(input => input.value.trim())
+                    .filter(val => val !== '');
+            } else {
+                data.responsibilities = [];
+            }
+
             if (currentEditType === 'project') {
                 data.tags = data.tags.split(',').map(t => t.trim()).filter(t => t);
-                data.responsibilities = data.responsibilities.split('\n').filter(r => r.trim());
                 saveProject(data);
             } else if (currentEditType === 'blog') {
                 saveBlog(data);
             } else if (currentEditType === 'experience') {
-                data.responsibilities = data.responsibilities.split('\n').filter(r => r.trim());
                 saveExperience(data);
             }
         });
