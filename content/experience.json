@@ -3,19 +3,16 @@
         {
             "id": 1,
             "title": "Senior Associate – DevOps Engineer (MarTech Platform)",
-            "company": "Xerago – MarTech Team",
+            "company": "Xerago.AI",
             "location": "Chennai, TN",
             "startDate": "Jul 2025",
             "endDate": "Present",
             "responsibilities": [
-                "Worked on deployment, upgrade, and migration of enterprise MarTech platforms (Unica) from on-premises environments to cloud-based infrastructure",
-                "Designed and operated Kubernetes-based environments (k3s) for demo, training, and validation purposes, enabling safe testing of platform upgrades and configurations",
-                "Built and maintained Docker images and Helm charts to standardize application packaging and deployment workflows",
-                "Implemented and managed cloud infrastructure and services on AWS, supporting application deployments and platform operations",
-                "Designed an automated data pipeline integrating Airbyte, MinIO, Hadoop, and Dremio for internal testing and validation of data flows",
-                "Developed a lightweight command-based web chatbot that translates simple English queries into system command outputs using APIs and rule-based logic (Anti-Gravity), without reliance on AI models",
-                "Supported platform reliability through configuration management, deployment automation, and operational testing across environments",
-                "Collaborated closely with MarTech and platform teams to support migrations, demos, and internal enablement activities"
+                "Architected and independently developed OpsAction Unified OS, an R&D-driven DevOps platform Using Antigravity centralizing SSH access, multi-cloud Kubernetes orchestration (AWS, Azure, GCP), RBAC, audit logging, and one-click operations, with full documentation to enable team adoption and scalability.",
+                "Executed deployment, upgrade, and cloud migration of enterprise MarTech platforms (Unica), modernizing on- premises workloads into containerized, cloud-ready architectures with improved stability and operational efficiency.",
+                "Designed and implemented CI/CD pipelines using GitLab CI and Jenkins to automate build, test, image creation, and deployment workflows, reducing manual intervention and ensuring consistent, repeatable releases across environments.",
+                "Standardized application packaging and release management by building and maintaining Docker images and Helm charts, enabling versioned deployments, rollback strategies, and controlled release processes.",
+                "Implemented internal data and platform validation pipelines integrating Airbyte, MinIO, Hadoop, and Dremio to support integration testing, analytics validation, and controlled data movement within the MarTech ecosystem."
             ]
         },
         {
