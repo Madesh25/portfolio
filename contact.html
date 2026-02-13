@@ -525,6 +525,80 @@
                 opacity: 0;
             }
         }
+
+        /* ==== SMOOTH TRANSITIONS ==== */
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            animation: pageFadeIn 0.4s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .contact-form,
+        .contact-info,
+        .terminal-window,
+        .form-group input,
+        .form-group textarea {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-form:hover,
+        .contact-info:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 255, 106, 0.1);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            transform: scale(1.01);
+            box-shadow: 0 0 0 2px rgba(0, 255, 106, 0.2);
+        }
+
+        .nav a,
+        button,
+        .submit-btn,
+        a[class*="btn"] {
+            transition: transform 0.2s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .nav a:hover {
+            transform: translateY(-1px);
+        }
+
+        button:hover,
+        .submit-btn:hover {
+            transform: scale(1.05);
+        }
+
+        button:active,
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
     </style>
 </head>
 

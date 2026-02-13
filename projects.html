@@ -475,6 +475,102 @@
             transform: translateY(0);
         }
 
+        /* ==== SMOOTH TRANSITIONS ==== */
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            animation: pageFadeIn 0.4s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Card Hover Effects */
+        .terminal-window,
+        .project-card,
+        article {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-card:hover,
+        article:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 12px 28px rgba(0, 255, 106, 0.12),
+                0 0 40px rgba(0, 255, 106, 0.08);
+            border-color: var(--color-green);
+        }
+
+        /* Button & Link Animations */
+        .nav a,
+        button,
+        a[class*="btn"],
+        .neon-btn {
+            transition: transform 0.2s ease, background-color 0.25s ease,
+                box-shadow 0.25s ease, color 0.25s ease;
+        }
+
+        .nav a:hover {
+            transform: translateY(-1px);
+        }
+
+        button:hover,
+        .neon-btn:hover {
+            transform: scale(1.05);
+        }
+
+        button:active,
+        .neon-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Stagger Animation */
+        .fade-in:nth-child(1) {
+            transition-delay: 0.05s;
+        }
+
+        .fade-in:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .fade-in:nth-child(3) {
+            transition-delay: 0.15s;
+        }
+
+        .fade-in:nth-child(4) {
+            transition-delay: 0.2s;
+        }
+
+        .fade-in:nth-child(5) {
+            transition-delay: 0.25s;
+        }
+
+        .fade-in:nth-child(6) {
+            transition-delay: 0.3s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
         .neon-btn {
             box-shadow: 0 0 5px var(--color-green), 0 0 10px var(--color-green);
             transition: all 0.3s ease;
