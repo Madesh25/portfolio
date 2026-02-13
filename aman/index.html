@@ -1139,7 +1139,7 @@
             return null;
         }
 
-        async function pushFileToGitHub(token, path, content, sha) {
+        async function pushFileToGitHub(token, path, content, sha, retryCount = 0) {
             const body = {
                 message: `Update ${path} via admin panel`,
                 content: btoa(unescape(encodeURIComponent(content))),
@@ -1161,7 +1161,15 @@
 
             if (!response.ok) {
                 const errorData = await response.json();
-                throw new Error(errorData.message || 'Failed to push');
+
+                // If SHA conflict and haven't retried yet, fetch fresh SHA and retry
+                if (response.status === 409 && retryCount < 2) {
+                    console.log(`SHA conflict for ${path}, retrying with fresh SHA...`);
+                    const freshSha = await getFileSha(token, path);
+                    return pushFileToGitHub(token, path, content, freshSha, retryCount + 1);
+                }
+
+                throw new Error(errorData.message || `Failed to push (${response.status})`);
             }
             return await response.json();
         }
@@ -1182,6 +1190,7 @@
                     { path: 'content/experience.json', data: JSON.stringify(experienceData, null, 4) }
                 ];
 
+                // Push files sequentially to avoid conflicts
                 for (const file of files) {
                     const sha = await getFileSha(token, file.path);
                     await pushFileToGitHub(token, file.path, file.data, sha);
@@ -1189,6 +1198,7 @@
 
                 updateSyncStatus('synced', '✓ Synced to live site');
                 showToast('Changes synced to GitHub! Live site will update in ~1 min.');
+                setTimeout(() => updateSyncStatus('', 'Ready'), 5000);
             } catch (error) {
                 console.error('GitHub sync error:', error);
                 updateSyncStatus('error', '✗ Sync failed');
