@@ -1,6 +1,16 @@
 {
     "blogs": [
         {
+            "title": "Understanding OWASP Top 10: Securing Modern Web Applications in DevOps Environments",
+            "category": "Security",
+            "excerpt": "A practical breakdown of the OWASP Top 10 vulnerabilities and how DevOps engineers can prevent them using secure coding practices, CI/CD security scanning, and infrastructure hardening.",
+            "readTime": "7 min read",
+            "status": "Draft in progress",
+            "responsibilities": [],
+            "id": 1770915632335,
+            "slug": "understanding-owasp-top-10-securing-modern-web-applications-in-devops-environments"
+        },
+        {
             "id": 1,
             "title": "Operating a Lightweight Kubernetes Cluster (k3s on Proxmox)",
             "category": "Kubernetes",
