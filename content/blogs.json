@@ -1,6 +1,16 @@
 {
     "blogs": [
         {
+            "title": "DevOps Engineers Becoming Platform Engineers",
+            "category": "Devops",
+            "excerpt": "1. DevOps engineers are now designing internal developer platforms that provide standardized environments for development, testing, and production instead of managing isolated pipelines.\n\n2. Automation is becoming the foundation of operations, with engineers building reusable workflows for infrastructure provisioning, deployments, scaling, and policy enforcement.\n\n3. Security and governance are integrated directly into platforms using RBAC, access control, and audit logging to ensure compliance without slowing down development.\n\n4. Self-service capabilities are enabling developers to provision resources, deploy applications, and monitor services independently through centralized dashboards.\n\n5. Observability and reliability engineering are becoming core responsibilities, with unified monitoring, logging, and alerting systems built directly into the platform architecture.",
+            "readTime": "5 min read",
+            "status": "Draft in progress",
+            "responsibilities": [],
+            "id": 1771778414501,
+            "slug": "devops-engineers-becoming-platform-engineers"
+        },
+        {
             "title": "Understanding OWASP Top 10: Securing Modern Web Applications in DevOps Environments",
             "category": "Security",
             "excerpt": "A practical breakdown of the OWASP Top 10 vulnerabilities and how DevOps engineers can prevent them using secure coding practices, CI/CD security scanning, and infrastructure hardening.",
