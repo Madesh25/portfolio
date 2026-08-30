@@ -46,16 +46,13 @@
         },
         {
             "id": 4,
-            "title": "YTS Trainee (Government Apprenticeship Program)",
-            "company": "NCR Corporation – Chennai, TN",
+            "title": "Trainee",
+            "company": "NCR Corporation",
             "location": "Chennai, TN",
             "startDate": "Jul 2022",
             "endDate": "Dec 2022",
             "responsibilities": [
-                "Performed functional and performance testing of ATM systems to ensure reliability",
-                "Executed mechanical assembly of ATM units following engineering guidelines",
-                "Supported the integration of hardware components",
-                "Conducted final quality inspections to verify compliance with technical standards"
+                "Assembled ATM units end to end, carried out functional and performance testing of the assembled systems, and completed final verification of the accompanying build and quality documentation before dispatch."
             ]
         }
     ]
