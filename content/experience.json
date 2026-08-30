@@ -17,17 +17,16 @@
         },
         {
             "id": 2,
-            "title": "DevOps Engineer (Independent Practice & Skill Development)",
-            "company": "Self-Directed Learning",
+            "title": "Career Break – Self-Directed DevOps Study",
+            "company": "Independent",
             "location": "",
             "startDate": "Feb 2025",
             "endDate": "Jul 2025",
             "responsibilities": [
-                "Dedicated period focused on strengthening DevOps and platform engineering skills through hands-on implementation and practice",
-                "Designed and automated CI/CD pipelines using Jenkins and GitLab CI to improve deployment consistency and reduce manual effort",
-                "Built and operated cloud and container-based environments using AWS, Docker, Kubernetes, and OpenShift for application deployment testing",
-                "Implemented infrastructure automation using Terraform and Ansible, focusing on repeatable and reliable environment provisioning",
-                "Set up monitoring and observability stacks using Prometheus, Grafana, and CloudWatch to gain operational visibility"
+                "Built and ran a home lab on Proxmox, including a self-managed k3s Kubernetes cluster with ingress, persistent storage and day-2 operations",
+                "Wrote CI/CD pipelines in Jenkins and GitLab CI to build and deploy containerised applications into the cluster",
+                "Provisioned AWS infrastructure with Terraform and handled configuration through Ansible playbooks, tearing environments down and rebuilding them to test repeatability",
+                "Ran a Prometheus, Grafana and CloudWatch monitoring stack against the lab environments, with dashboards and alert rules"
             ]
         },
         {
