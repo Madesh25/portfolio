@@ -2,17 +2,17 @@
     "experience": [
         {
             "id": 1,
-            "title": "Senior Associate – DevOps Engineer (MarTech Platform)",
-            "company": "Xerago.AI",
+            "title": "Senior Associate (DevOps Engineer) – MarTech",
+            "company": "Xerago",
             "location": "Chennai, TN",
             "startDate": "Jul 2025",
             "endDate": "Present",
             "responsibilities": [
-                "Architected and independently developed OpsAction Unified OS, an R&D-driven DevOps platform Using Antigravity centralizing SSH access, multi-cloud Kubernetes orchestration (AWS, Azure, GCP), RBAC, audit logging, and one-click operations, with full documentation to enable team adoption and scalability.",
-                "Executed deployment, upgrade, and cloud migration of enterprise MarTech platforms (Unica), modernizing on- premises workloads into containerized, cloud-ready architectures with improved stability and operational efficiency.",
-                "Designed and implemented CI/CD pipelines using GitLab CI and Jenkins to automate build, test, image creation, and deployment workflows, reducing manual intervention and ensuring consistent, repeatable releases across environments.",
-                "Standardized application packaging and release management by building and maintaining Docker images and Helm charts, enabling versioned deployments, rollback strategies, and controlled release processes.",
-                "Implemented internal data and platform validation pipelines integrating Airbyte, MinIO, Hadoop, and Dremio to support integration testing, analytics validation, and controlled data movement within the MarTech ecosystem."
+                "Currently delivering the migration of enterprise MarTech platforms from on-premises infrastructure to cloud-hosted, containerised environments end to end, as sole owner of assessment, target architecture, build, cutover and post-migration validation across development, testing and production.",
+                "Built the CI/CD pipeline for a banking client's website migration from on-premises hosting to Adobe Edge Delivery Services, automating build, content deployment and environment configuration across staging and production.",
+                "Deployed and operated a digital experience analytics and session-replay platform on Kubernetes using Helm charts across a mixed Windows and Linux node pool cluster, handling OS-specific scheduling, node affinity and cross-platform networking.",
+                "Maintain and deploy internal applications on self-managed kubeadm Kubernetes clusters through a self-healing CI/CD pipeline with automated failure detection, retry and rollback.",
+                "Wrote Bash and Python automation covering environment setup, log collection, health checks and routine platform tasks, shared across the team as reusable tooling."
             ]
         },
         {
