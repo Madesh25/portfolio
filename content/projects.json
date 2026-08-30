@@ -67,24 +67,6 @@
                 "Self-Hosted"
             ],
             "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&h=400&fit=crop"
-        },
-        {
-            "id": 8,
-            "title": "Containerized Server Infrastructure",
-            "status": "Operational",
-            "description": "Built self-hosted server infrastructure using Docker for various services.",
-            "responsibilities": [
-                "Containerized applications using Docker Compose",
-                "Managed persistent storage and networking",
-                "Implemented backup and recovery procedures"
-            ],
-            "tags": [
-                "Docker",
-                "Self-Hosted",
-                "Infrastructure",
-                "Linux"
-            ],
-            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
         }
     ]
 }
