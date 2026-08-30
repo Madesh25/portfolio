@@ -48,24 +48,6 @@
             "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
         },
         {
-            "id": 2,
-            "title": "CI/CD Pipeline Automation",
-            "status": "Operational",
-            "description": "Designed and operated CI/CD pipelines to automate build, test, and deployment workflows.",
-            "responsibilities": [
-                "Pipeline design and automation using Jenkins and GitLab CI",
-                "Integration with container platforms (Docker, Kubernetes)",
-                "Deployment reliability and rollback support"
-            ],
-            "tags": [
-                "CI/CD",
-                "Jenkins",
-                "GitLab CI",
-                "Kubernetes"
-            ],
-            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
-        },
-        {
             "id": 3,
             "title": "AWS Infrastructure Automation",
             "status": "Operational",
