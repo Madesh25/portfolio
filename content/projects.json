@@ -48,94 +48,25 @@
             "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
         },
         {
-            "id": 3,
-            "title": "AWS Infrastructure Automation",
-            "status": "Operational",
-            "description": "Built and managed cloud infrastructure on AWS using infrastructure as code principles.",
-            "responsibilities": [
-                "Provisioned EC2, S3, IAM, RDS, and ECS using Terraform",
-                "Implemented cost-effective resource management",
-                "Automated infrastructure deployment and configuration"
-            ],
-            "tags": [
-                "AWS",
-                "Terraform",
-                "IaC",
-                "Cloud"
-            ],
-            "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop"
-        },
-        {
             "id": 4,
-            "title": "Kubernetes Cluster Operations",
+            "title": "Home Lab – k3s on Proxmox",
             "status": "Operational",
-            "description": "Operated lightweight Kubernetes clusters for container orchestration and application deployment.",
+            "description": "Self-managed Kubernetes cluster running on Proxmox at home, used for testing deployments, pipelines and monitoring setups outside client work.",
             "responsibilities": [
-                "Deployed and managed k3s clusters on Proxmox",
-                "Configured networking, ingress, and storage",
-                "Managed containerized applications with Helm charts"
+                "Built and maintain a k3s cluster on Proxmox virtual machines, handling networking, ingress and persistent storage",
+                "Package and deploy applications to the cluster with Helm charts",
+                "Run self-hosted services in Docker with persistent volumes, backup and recovery procedures",
+                "Use the cluster to test upgrades, pipeline changes and monitoring configurations before applying them elsewhere"
             ],
             "tags": [
-                "Kubernetes",
                 "k3s",
+                "Proxmox",
+                "Kubernetes",
                 "Helm",
-                "Containers"
+                "Docker",
+                "Self-Hosted"
             ],
             "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&h=400&fit=crop"
-        },
-        {
-            "id": 5,
-            "title": "Observability Stack",
-            "status": "Operational",
-            "description": "Implemented monitoring and observability infrastructure for system visibility and alerting.",
-            "responsibilities": [
-                "Set up Prometheus and Grafana for metrics collection",
-                "Configured CloudWatch for AWS resource monitoring",
-                "Built dashboards for operational visibility"
-            ],
-            "tags": [
-                "Prometheus",
-                "Grafana",
-                "CloudWatch",
-                "Monitoring"
-            ],
-            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
-        },
-        {
-            "id": 6,
-            "title": "Container Platform Operations",
-            "status": "Operational",
-            "description": "Managed containerized application deployments on Red Hat OpenShift platform.",
-            "responsibilities": [
-                "Deployed applications using OpenShift and Helm",
-                "Managed container lifecycle and scaling",
-                "Implemented container security best practices"
-            ],
-            "tags": [
-                "OpenShift",
-                "Docker",
-                "Containers",
-                "Helm"
-            ],
-            "image": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600&h=400&fit=crop"
-        },
-        {
-            "id": 7,
-            "title": "Configuration Management with Ansible",
-            "status": "Operational",
-            "description": "Automated server configuration and application deployment using Ansible.",
-            "responsibilities": [
-                "Developed Ansible playbooks for configuration management",
-                "Automated application installation and updates",
-                "Standardized server configurations across environments"
-            ],
-            "tags": [
-                "Ansible",
-                "Automation",
-                "Configuration",
-                "IaC"
-            ],
-            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
         },
         {
             "id": 8,
