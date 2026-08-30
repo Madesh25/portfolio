@@ -31,17 +31,17 @@
         },
         {
             "id": 3,
-            "title": "Junior PLM Consultant (Junior DevOps Engineer)",
-            "company": "PDSVISION – Chennai, TN",
+            "title": "Junior PLM Consultant",
+            "company": "PDSVISION",
             "location": "Chennai, TN",
             "startDate": "Jan 2023",
             "endDate": "Feb 2025",
             "responsibilities": [
-                "Supported deployment and operations of ThingWorx IoT applications in cloud-based environments, focusing on scalability and availability",
-                "Monitored application and infrastructure health using GCP monitoring tools, ensuring system uptime and proactive issue detection",
-                "Automated installation, upgrade, and patching processes for enterprise applications, reducing manual effort and deployment risk",
-                "Streamlined application customization and release workflows by automating packaging and rollout processes",
-                "Worked closely with platform and infrastructure components, gaining hands-on experience in CI/CD pipelines, containerized deployments, and production support workflows"
+                "Deployed and operated ThingWorx IoT and Windchill PLM applications across on-premises data centres and public cloud (AWS and GCP), supporting 2 customer environments with responsibility for availability, scalability and release automation.",
+                "Provisioned and managed AWS infrastructure — EC2, VPC, IAM, S3, RDS, ECS, ELB, Auto Scaling, Route 53 and CloudWatch — through Terraform and configured with Ansible, including multi-AZ high-availability topologies and disaster-recovery configurations validated through scheduled failover testing.",
+                "Automated Windchill deployment and customisation workflows using shell scripting and CI practices, reducing a manual release process to a repeatable pipeline and cutting rollout time by 30%.",
+                "Set up centralised monitoring and alerting with Prometheus, Grafana, CloudWatch and GCP Cloud Monitoring across 10+ instances, covering dashboards, alert thresholds, log aggregation and health checks, sustaining 98% uptime against SLA.",
+                "Provided 24/7 operational support on a rotating on-call basis for a production IoT web application, handling incident triage, log analysis and resolution, and driving AWS and GCP support cases through to closure."
             ]
         },
         {
