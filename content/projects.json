@@ -1,6 +1,28 @@
 {
     "projects": [
         {
+            "title": "HCL Unica – Cloud-Native Deployment on Google Cloud",
+            "status": "Operational",
+            "description": "Delivered the cloud-native deployment of the HCL Unica marketing platform on Google Kubernetes Engine, moving the product from a traditional on-premises install to a containerised, cluster-based architecture.",
+            "responsibilities": [
+                "Moved the platform from an on-premises install to a containerised deployment on GKE Maintained Helm charts in GitHub and Docker images in a Harbor private registry",
+                "Drove automated, repeatable deployments across environments with GitLab CI/CD and Argo CD",
+                "Handled environment configuration and release management across development, testing and production"
+            ],
+            "tags": [
+                "GKE",
+                "GCP",
+                "Kubernetes",
+                "Helm",
+                "GitLab CI",
+                "Argo CD",
+                "Harbor",
+                "Docker"
+            ],
+            "image": "data:image/webp;base64,UklGRlIEAABXRUJQVlA4IEYEAABwKQCdASqZAfgAPp1OpE2lpCOiINVYSLATiWlu4XaxG/OH6Adln+X6NpF3+R/JH0870dq/dCOH/0/iA0vuO/0VM/n1TwIAV96KxoPcpy5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuJcqfTYEzh0lOXLly5cuVmbIVLWrspUOYNzGNA3lpRZ+RBvfmWnmY3nTT42W5BmjbD2URCMTuEjzN6WppHhjpBfiqxCRizDxk/aAlTabiEmd+PewZWGR+1Ac7d5ux6hyQz/whQL3ZrFSJgXed5U0rL4g0HuU5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly4QAAP7/t0wAAAABCAKiXngHKabgKIqVp6QoiX/IfPX/wLxBVM4YUpUMu8L5Xp17cGef7k57u0SKr8hjnUyEXyO7v2Fmxr0NZOk2WYQuu9M0+3QBBXVk78KCueUNmKo/lOWy9HTrboJCGwizcPujYk0SoSV39bfB62AAIM8iCoRjyrEZ1rFAcrgFRl46fdiOe3en4ZfuzbsddmiEltBA9jJdJ7SGhjG9I1ED/qlIioqpQGzImcQXh0ghJxKKl/gEe6OxNMsXyX85rE/WQ4Ty+/oC+nGkrlP438i98K/ZfOhYnF5Ivvu3edZ0jEAc3y5f7gglq3pVkp/0b6Y6uBQCHFDNYaVeum54T45vll1qiehGDimdaLRR2wW4AwblAPqew4mo2sCwPQ0vF45b6TxESWa2r/4huDfnBSet1oxUiD7ZUaUS8MzVtkihiP19HGEU7QL5ssswy8erRMqGvDMkNj9wQ/mbwAPAr6l/mgGPwClJCY0DkfvvNQtLvEwDpokq29HSVp0D0w8qEcuo/gRPmRdDx4M89uj8OYuEF1k2Goa5272KV9tMew7YGO5UBbfrq8DFEXbFPAIIVNYgjyQ+EjmHrmJm2o/53bhllL+/5kdmh/D4AdHhmG3RL9yulnAtBpNsmLkagrIFmSOEikJMINJozrSdTJL6tEqZhBKDn7RIotw5N/07IEeaHIWJi77+OVk/ZzRXSX5PgO+1kW0hf1elogphGhC0ZwYwsKRmAlyTNgQaGHd5JV7GECSRV/p4+rJDQc3lbIxfjmIfBanEEJbU1KjuCSnBgaKhvhnnMyL6M7rL8QWlOpclpcqXyiSEc5ZC6bLQCkqZ23gXxQdV9C172zr7duOvn1m3k2pIiep9jJ0orkinTSQGw+BNNWaEpgUrde79ngBST+eJ+6etcWEKu8nRaG0X7NUJYKsWpV81qXGv85dI3tfOznsJazjK246asViliGjWpnWMWG/04ujyJkCIVLsFB7kkkihiigAAAAAAAA==",
+            "id": 1788090673711
+        },
+        {
             "title": "Banking Website Migration to Adobe Edge Delivery Services",
             "status": "Operational",
             "description": "Migrated a banking client's website estate from on-premises hosting to Adobe Edge Delivery Services, covering build, content deployment and environment configuration across staging and production.",
