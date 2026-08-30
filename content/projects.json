@@ -31,19 +31,22 @@
         },
         {
             "id": 1,
-            "title": "24/7 IoT Web Application",
+            "title": "ThingWorx IoT Platform – Operations & Monitoring",
             "status": "Operational",
-            "description": "Real-time IoT application hosted on GCP with continuous availability monitoring.",
+            "description": "Production ThingWorx IoT platform operated across GCP and AWS, provisioned with Terraform and configured with Ansible, with responsibility for availability and release automation.",
             "responsibilities": [
-                "Maintained 24/7 uptime with zero escalations over one year",
-                "Monitored system health using GCP observability tools",
-                "Ensured high availability through proactive alerting"
+                "Operated the platform across both clouds with responsibility for availability and release automation",
+                "Ran centralised monitoring and alerting with Prometheus, Grafana, CloudWatch and GCP Cloud Monitoring",
+                "Owned the support ticket queue end to end, from incident triage through to resolution with internal teams and cloud vendor support"
             ],
             "tags": [
                 "GCP",
-                "IoT",
-                "Monitoring",
-                "High Availability"
+                "AWS",
+                "Terraform",
+                "Ansible",
+                "Prometheus",
+                "Grafana",
+                "CloudWatch"
             ],
             "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
         },
